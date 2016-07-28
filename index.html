@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Invoice</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>The Cafe</strong>
+                        <br>
+                        31-33 Chifley Drive
+                        <br>
+                        Preston, CA 90026
+                        <br>
+                        <abbr title="Phone">P:</abbr> (613) 9485-4900
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    <p id="current-date">
+                        <em> </em>
+                    </p>
+                    <p>
+                        <em>Receipt #: 34522677W</em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h1>Receipt</h1>
+                </div>
+                </span>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>No. of Items</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Line 1 -->
+                        <tr>
+                            <!-- Product Name -->
+                            <td class="col-md-9"><input type="text" id="inputProductName1" class="item-name" value="Item Name 1" onkeyup=""></td>
+                            <!-- No. of Items -->
+                            <td class="col-md-1"><input type="text" id="inputNoOfItems1" class="item-format" value="0" onkeyup="totalPrice1()"></td>
+                            <!-- Price -->
+                            <td class="col-md-1"><input type="text" id="inputPrice1" class="item-format" value="0" onkeyup="totalPrice1()"></td>
+                            <!-- Total -->
+                            <td class="col-md-1"><input type="text" id="inputTotal1" class="item-format" value="0" onkeyup=""></td>
+                        </tr>
+                        
+                    <!-- Line 2 -->
+                        <tr>
+                            <!-- Product Name -->
+                            <td class="col-md-9"><input type="text" id="inputProductName2" class="item-name" value="Item Name 2" onkeyup=""></td>
+                            <!-- No. of Items -->
+                            <td class="col-md-1"><input type="text" id="inputNoOfItems2" class="item-format" value="0" onkeyup="totalPrice2()"></td>
+                            <!-- Price -->
+                            <td class="col-md-1"><input type="text" id="inputPrice2" class="item-format" value="0" onkeyup="totalPrice2()"></td>
+                            <!-- Total -->
+                            <td class="col-md-1"><input type="text" id="inputTotal2" class="item-format" value="0" onkeyup=""></td>
+                        </tr>
+
+                    <!-- Line 3 -->
+                        <tr>
+                            <!-- Product Name -->
+                            <td class="col-md-9"><input type="text" id="inputProductName3" class="item-name" value="Item Name 3" onkeyup=""></td>
+                            <!-- No. of Items -->
+                            <td class="col-md-1"><input type="text" id="inputNoOfItems3" class="item-format" value="0" onkeyup="totalPrice3()"></td>
+                            <!-- Price -->
+                            <td class="col-md-1"><input type="text" id="inputPrice3" class="item-format" value="0" onkeyup="totalPrice3()"></td>
+                            <!-- Total -->
+                            <td class="col-md-1"><input type="text" id="inputTotal3" class="item-format" value="0" onkeyup=""></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>   </td>
+                            <td class="text-right">
+                            <!--Sub Total-->
+                            <p>
+                                <strong>Subtotal: </strong>
+                            </p>
+                            <p>
+                                <strong>Tax: </strong>
+                            </p></td>
+                            <td class="text-center">
+                            <p id="subtotal">
+                                <strong>$6.94</strong>
+                            </p>
+                            <!--Tax-->
+                            <p>
+                                <strong>$6.94</strong>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                            <td class="text-center text-danger"><h4><strong>$31.53</strong></h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-success btn-lg btn-block" id="reset" onclick="resetPage()">
+                    Reset   <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                </button></td>
+            </div>
+        </div>
+    </div>                                       
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
